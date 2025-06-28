@@ -140,11 +140,11 @@ def  save_to_csv():
 
         with open("employee.txt", 'w', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
-            writer.writerow(["code", "name", "age", "job"])  # سرستون‌ها
+            writer.writerow(["code", "name", "age", "job"])  
             writer.writerows(results)
 
         sq.close()
-        tkinter.messagebox.showinfo("موفقیت", f"داده‌ها در {"employee.txt"} ذخیره شدند.")
+        tkinter.messagebox.showinfo(f"Data is saved{"employee.txt"} ")
 
 
 window=tk.Tk()
@@ -165,7 +165,7 @@ button_search.place(x=240,y=90)
 button_delete=tk.Button(window,text="delete",command=window_delete,bg="blue")
 button_delete.place(x=240,y=120)
 
-button_save = tk.Button(window, text="ذخیره در CSV", command=save_to_csv, bg="blue")
+button_save = tk.Button(window, text="save as CSV", command=save_to_csv, bg="blue")
 button_save.place(x=240, y=150)
 
 window.mainloop()
